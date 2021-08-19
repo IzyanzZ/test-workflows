@@ -16,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Installing Ngrok
+      - name: Setup Ngrok
         run: |
-            echo "Nuuu"
+            apt upgrade
+            apt update
+            apt instal unzip
+            apt install curl
+            curl -S https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+            unzip ngrok-stable-linux-arm.zip
+            
+          
