@@ -1,0 +1,21 @@
+name: Run-Me
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+  workflow_dispatch:
+  
+  
+jobs:
+  #Testing
+  build:
+    runs-on: ubuntu-lastest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Installing Ngrok
+        run: |
+            echo "Nuuu"
